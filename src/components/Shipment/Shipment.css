@@ -1,0 +1,23 @@
+.ship-form{
+    margin: 40px 400px;
+}
+.ship-form input{
+    margin-top: 10px;
+    display:block;
+    border: 1px solid lightblue;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px;
+    padding: 5px;
+    width: 400px;
+}
+
+.ship-form span {
+    color: red;
+}
+#btn{
+    
+    background-color: goldenrod;
+    margin-top: 40px;
+    width: 100px;
+    cursor: pointer;
+}
