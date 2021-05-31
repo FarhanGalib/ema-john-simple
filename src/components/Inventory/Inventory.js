@@ -2,12 +2,23 @@ import React from 'react';
 import fakeData from '../../fakeData';
 
 const Inventory = () => {
-    const showData = (data) =>{
-        console.log(fakeData);
+    const handleAddInventory = () =>{
+        console.log("before uploading....",fakeData);
+        fetch('http://localhost:4200/addProduct',{
+                method: 'POST',
+                body: JSON.stringify(fakeData),
+                headers: {
+                    "Content-Type" : "application/json; charset = UTF-8"
+                }
+            })
+            .then(res => res.json())
+            .then(data=>{
+                console.log("after",data);
+            });
     }
     return (
         <div>
-            <button onClick={showData}>show</button>
+            <button onClick={handleAddInventory}>Add inventory</button>
         </div>
     );
 };
